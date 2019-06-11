@@ -4,17 +4,13 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class MainGitBranches {
     public static void main(String[] args) {
-        int licznik = 0;
-        try(BufferedReader bufferedReader = new BufferedReader(new FileReader("data.txt"))) {
-            String linia;
-            while ((linia = bufferedReader.readLine()) != null) {
-                licznik++;
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println("ilość linii: " + licznik);
+        new Zapis().zapisz();
+        int liczba = new Odczyt().liczbaLinii();
     }
 }
